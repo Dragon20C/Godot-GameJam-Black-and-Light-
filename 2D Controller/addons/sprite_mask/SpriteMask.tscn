@@ -1,0 +1,69 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://addons/sprite_mask/followMouse.gd" type="Script" id=2]
+[ext_resource path="res://addons/sprite_mask/SpriteMaskScene_Main.gd" type="Script" id=3]
+[ext_resource path="res://Mario MOving.jpg" type="Texture" id=4]
+[ext_resource path="res://Textures/Player/2D Player.png" type="Texture" id=5]
+
+[sub_resource type="ViewportTexture" id=6]
+viewport_path = NodePath("MaskViewport")
+
+[node name="SpriteMaskScene" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="MaskViewport" type="Viewport" parent="."]
+size = Vector2( 480, 272 )
+transparent_bg = true
+hdr = false
+render_target_v_flip = true
+render_target_update_mode = 3
+
+[node name="Mask" type="Sprite" parent="MaskViewport"]
+position = Vector2( 240, 136 )
+texture = ExtResource( 5 )
+script = ExtResource( 2 )
+
+[node name="LightMask" type="Light2D" parent="."]
+texture = SubResource( 6 )
+offset = Vector2( 240, 136 )
+mode = 3
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 44.429, 47.7476 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 218.249, 50.1287 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 407.944, 46.1602 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 334.13, 145.373 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( 152.372, 150.135 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )
+
+[node name="Sprite6" type="Sprite" parent="."]
+position = Vector2( 40.4604, 244.585 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )
+
+[node name="Sprite7" type="Sprite" parent="."]
+position = Vector2( 232.536, 239.823 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )
+
+[node name="Sprite8" type="Sprite" parent="."]
+position = Vector2( 424.611, 240.617 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )

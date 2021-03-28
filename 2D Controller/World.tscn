@@ -1,71 +1,17 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://MouseCone.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Wall.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Textures/BlackBlock.png" type="Texture" id=4]
+[ext_resource path="res://Mario MOving.jpg" type="Texture" id=3]
 
 [node name="World" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-
-[node name="Hidden" type="Node2D" parent="."]
-
-[node name="Wall3" type="Node2D" parent="Hidden"]
-position = Vector2( 296.46, 98.5301 )
-
-[node name="Sprite" type="Sprite" parent="Hidden/Wall3"]
-position = Vector2( 31.961, 5.25593 )
-scale = Vector2( 1.29878, 0.135752 )
-texture = ExtResource( 4 )
-
 [node name="MouseCone" parent="." instance=ExtResource( 2 )]
 
-[node name="Walls" type="Node2D" parent="."]
+[node name="Mario MOving" type="Sprite" parent="."]
+light_mask = 1024
+position = Vector2( 106.429, 110.122 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 3 )
 
-[node name="Wall" parent="Walls" instance=ExtResource( 3 )]
-position = Vector2( 212.952, 98.5301 )
-
-[node name="Sprite" parent="Walls/Wall" index="0"]
-position = Vector2( 31.961, 5.25593 )
-scale = Vector2( 1.29878, 0.135752 )
-
-[node name="Wall5" parent="Walls" instance=ExtResource( 3 )]
-position = Vector2( 203.947, 114.546 )
-rotation = 1.5708
-
-[node name="Sprite" parent="Walls/Wall5" index="0"]
-position = Vector2( 31.961, 5.25593 )
-scale = Vector2( 1.29878, 0.135752 )
-
-[node name="Wall6" parent="Walls" instance=ExtResource( 3 )]
-position = Vector2( 379.626, 113.222 )
-rotation = 1.5708
-
-[node name="Sprite" parent="Walls/Wall6" index="0"]
-position = Vector2( 31.961, 5.25593 )
-scale = Vector2( 1.29878, 0.135752 )
-
-[node name="Wall2" parent="Walls" instance=ExtResource( 3 )]
-position = Vector2( 212.952, 182.829 )
-
-[node name="Sprite" parent="Walls/Wall2" index="0"]
-position = Vector2( 31.961, 5.25593 )
-scale = Vector2( 1.29878, 0.135752 )
-
-[node name="Wall4" parent="Walls" instance=ExtResource( 3 )]
-position = Vector2( 296.46, 182.829 )
-
-[node name="Sprite" parent="Walls/Wall4" index="0"]
-position = Vector2( 31.961, 5.25593 )
-scale = Vector2( 1.29878, 0.135752 )
-
-[editable path="Walls/Wall"]
-
-[editable path="Walls/Wall5"]
-
-[editable path="Walls/Wall6"]
-
-[editable path="Walls/Wall2"]
-
-[editable path="Walls/Wall4"]
+[node name="Player" parent="." instance=ExtResource( 1 )]
