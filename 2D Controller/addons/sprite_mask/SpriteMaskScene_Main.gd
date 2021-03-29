@@ -1,23 +1,9 @@
 tool
 extends Node2D
 
-export var follow_mouse = true
-#get the real size of the viewport
-var root_size = Vector2(480,272)
-
-#calculate black strip
-var correction = (Vector2(1280,720) - root_size)/2.0
-
-#we use fixed resolution of 1600 * 900
-var ratio = Vector2(1600.0, 900.0)/root_size
-
-var real_mouse_position = (get_viewport().get_mouse_position()-correction)*ratio
 
 func _process(delta):
-	print(OS.get_window_size())
-	
-	if follow_mouse:
-		$MaskViewport/Mask.position = get_global_mouse_position()
+	$MaskViewport/Mask.position = get_global_mouse_position()
 
 func update_mask_texture(val):
 	$MaskViewport/Mask.texture = val
